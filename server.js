@@ -52,6 +52,5 @@ app.use("/users", userRouter);
 app.use("/catalogues", catalogueRouter);
 app.use("/buildings", buildingRouter);
 app.use("/inspections", inspectionRouter);
-router.use("/assignments", assignmentRouter);
-router.use("/notifications", notificationRouter);
-
+app.use("/assignments", assignmentRouter);
+app.use("/notifications", notificationRouter);
