@@ -7,6 +7,8 @@ import catalogueRouter from "./lib/routes/catalogueRouter.js";
 import { swaggerSpec, swaggerUiExpress } from "./swagger.js";
 import buildingRouter from "./lib/routes/buildingRouter.js";
 import inspectionRouter from "./lib/routes/inspectionRouter.js";
+import assignmentRouter from "./lib/routes/assignmentRouter.js";
+import notificationRouter from "./lib/routes/notificationRouter.js";
 
 dotenv.config();
 const app = express();
@@ -50,5 +52,6 @@ app.use("/users", userRouter);
 app.use("/catalogues", catalogueRouter);
 app.use("/buildings", buildingRouter);
 app.use("/inspections", inspectionRouter);
-
+router.use("/assignments", assignmentRouter);
+router.use("/notifications", notificationRouter);
 
